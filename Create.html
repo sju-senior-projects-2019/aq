@@ -52,7 +52,7 @@
 <div class="container-fluid padding">
 <div class="row welcome text-center">
 	<div class="col-12">
-		<h1 class="display-4">Use Facebook to connect with other collectors!</h1>
+		<h1 class="display-4">Signup Below</h1>
 	</div>
 	<hr clas="dark">
 	<div class="col-12">
@@ -61,29 +61,17 @@
 </div>
 </div>
 
-<script src="https://unpkg.com/@pusher/chatkit-client@1/dist/web/chatkit.js"></script>
-<script>
-	const tokenProvider = new Chatkit.TokenProvider({
-  url: "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/b07cd718-dc1d-45f4-a7ff-2f1f534eae8e/token"
-});
-
-const chatManager = new Chatkit.ChatManager({
-  instanceLocator: "v1:us1:b07cd718-dc1d-45f4-a7ff-2f1f534eae8e",
-  userId: "abbyq12",
-  tokenProvider: tokenProvider
-});
-
-chatManager
-  .connect()
-  .then(currentUser => {
-    console.log("Connected as user ", currentUser);
-  })
-  .catch(error => {
-    console.error("error:", error);
-  });
-
-</script>
-
+<!---Login -->
+<form>
+	<form id="form3">
+	Email:<br>
+	<input type="text" name="Email"><br>
+	Password:<br>
+	<input type="text" name="Password"><br>
+	Re-enter Password:<br>
+	<input type="text" name="Password2"><br>
+</form> 
+<button type="CreateAccount" form="form3" value="CreateAccount">Create Account</button>
 
 
 

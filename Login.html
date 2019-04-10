@@ -52,7 +52,7 @@
 <div class="container-fluid padding">
 <div class="row welcome text-center">
 	<div class="col-12">
-		<h1 class="display-4">Use Facebook to connect with other collectors!</h1>
+		<h1 class="display-4">Login or Signup Below</h1>
 	</div>
 	<hr clas="dark">
 	<div class="col-12">
@@ -61,30 +61,24 @@
 </div>
 </div>
 
-<script src="https://unpkg.com/@pusher/chatkit-client@1/dist/web/chatkit.js"></script>
-<script>
-	const tokenProvider = new Chatkit.TokenProvider({
-  url: "https://us1.pusherplatform.io/services/chatkit_token_provider/v1/b07cd718-dc1d-45f4-a7ff-2f1f534eae8e/token"
-});
+<form>
+	<form id="form2">
+	Email:<br>
+	<input type="text" name="Email"><br>
+	Password:<br>
+	<input type="text" name="Password"><br>
+</form> 
+<button type="Login" form="form2" value="Login">Login</button>
+<a href="Create.html">
+    <button type="Create" form="form2" value="Create">Create Account</button>
+</a>
 
-const chatManager = new Chatkit.ChatManager({
-  instanceLocator: "v1:us1:b07cd718-dc1d-45f4-a7ff-2f1f534eae8e",
-  userId: "abbyq12",
-  tokenProvider: tokenProvider
-});
 
-chatManager
-  .connect()
-  .then(currentUser => {
-    console.log("Connected as user ", currentUser);
-  })
-  .catch(error => {
-    console.error("error:", error);
-  });
+
 
 </script>
-
-
+<script src="https://us1.pusherplatform.io/services/chatkit_token_provider/v1/b07cd718-dc1d-45f4-a7ff-2f1f534eae8e/token"></script>
+<link href="https://us1.pusherplatform.io/services/chatkit_token_provider/v1/b07cd718-dc1d-45f4-a7ff-2f1f534eae8e/token"/>
 
 
 </body>
