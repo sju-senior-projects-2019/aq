@@ -61,6 +61,18 @@
 </div>
 </div>
 
+</script>
+const chatkit = new Chatkit.default({
+    instanceLocator: "v1:us1:b07cd718-dc1d-45f4-a7ff-2f1f534eae8e",
+    key: "bf8eb364-bb0b-4cdc-a837-02886493992e:594/blwxMP8AFm1bEdvGMhp77Z2LKwC4kNgOQiIvnVM="
+})
+
+chatkit.createUser({
+    id: "abbyq12",
+    name: "Abigail Quinnan"
+})
+</script>
+
 <script src="https://unpkg.com/@pusher/chatkit-client@1/dist/web/chatkit.js"></script>
 <script>
 	const tokenProvider = new Chatkit.TokenProvider({

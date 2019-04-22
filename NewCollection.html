@@ -62,27 +62,19 @@
 </div>
 
 <form>
-    <form id="form1">
+    <form id="form1" method="POST" action="connect.php">
 	Item Name:<br>
-	<input type="text" name="item"><br>
+	<input type="text" name="item" required><br>
 	Date Added:<br>
-	<input type="text" name="date"><br>
-	For Sale (yes/no):<br>
-	<input type="text" name="forSale"><br>
+	<input type="text" name="date" required><br>
+	For Sale:<br>
+	<input type="radio" name="forSale" value="yes" checked required> Yes<br>
+    <input type="radio" name="forSale" value="no" required > No<br>
 	Description:<br>
-	<input type="text" name="description"><br>
+	<input type="text" name="description" required><br>
 	<br>
+    <input type="submit" value="Submit">
 </form> 
-    <button type="Submit" form="form1" value="Submit">Submit</button>
-
-
-
-
-</script>
-<script src="https://us1.pusherplatform.io/services/chatkit_token_provider/v1/b07cd718-dc1d-45f4-a7ff-2f1f534eae8e/token"></script>
-<link href="https://us1.pusherplatform.io/services/chatkit_token_provider/v1/b07cd718-dc1d-45f4-a7ff-2f1f534eae8e/token"/>
-
-
 </body>
 </html>
 
