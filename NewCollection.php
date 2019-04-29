@@ -61,19 +61,19 @@
 </div>
 </div>
 
-<form>
-    <include(db-newcollection.php)>
-    <form id="form1" method="POST" action="db-newcollection.php">
+<!--<form>-->
+    <?php include("http://localhost/db-newcollection.php");?>
+    <form id="form1" action="http://localhost/db-newcollection.php" method="POST">
 	Item Name:<br>
-	<input type="text" name="item" required><br>
+	<input type="text" name="Item_Name" required><br>
 	Date Added:<br>
-	<input type="text" name="date" required><br>
+	<input type="text" name="Date_Added" required><br>
 	For Sale (yes/no/maybe):<br>
-	<input type="text" name="for_sale" required><br>
+	<input type="text" name="For_Sale" required><br>
 	Description:<br>
-	<input type="text" name="description" required><br>
+	<input type="text" name="Description" required><br>
 	<br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" name='submit'>
 </form> 
 </body>
 </html>
