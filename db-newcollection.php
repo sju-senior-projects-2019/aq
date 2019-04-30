@@ -38,11 +38,11 @@ mysqli_query($conn, "INSERT INTO create_collection(Item_Name, Date_Added, For_Sa
 */
 
 if(isset($_POST['Submit'])){
-	//require_once('../mysqli_connect.php');
-	require_once('../inc/connect.inc.php');
+	require_once('../mysqli_connect.php');
+	//require_once('../inc/connect.inc.php');
 
-	$result = $dbc->query("SELECT Item_Name, Date_Added, For_Sale, Description FROM create_collection");
-	if($result->num_rows > 0){
+	$result = $dbc->query("SELECT Item_Name FROM create_collection WHERE Item_Name = '".$_POST['Item_Name']."' AND Date_Added= '".$_POST['Date_Added']."' AND For_Sale= '".$_POST['For_Sale']."' AND Description='".$_POST['Description']."'");
+	if($result->num_rows == 0){
 	$sql = "INSERT INTO create_collection(Item_Name, Date_Added, For_Sale, Description)
 	VALUES (?,?,?,?)";
 	$stmt = mysqli_prepare($dbc, $sql);

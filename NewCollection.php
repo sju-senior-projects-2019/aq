@@ -13,6 +13,8 @@
 </head>
 <body>
 
+
+
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 <div cass="container-fluid">
@@ -62,8 +64,7 @@
 </div>
 
 <!--<form>-->
-    <?php include("http://localhost/db-newcollection.php");?>
-    <form id="form1" action="http://localhost/db-newcollection.php" method="POST">
+    <form id="form1" action="http://localhost/db-newcollection.php" method="post">
 	Item Name:<br>
 	<input type="text" name="Item_Name" required><br>
 	Date Added:<br>
